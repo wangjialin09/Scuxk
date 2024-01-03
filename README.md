@@ -3,6 +3,10 @@ Scu选课脚本
 
 该项目改进自：https://github.com/Junbo2002/scu-course-select
 
+全网能找到的最原始版本为：https://github.com/MEHANTA/SCUCourseSelectHelper
+
+感谢以上两位大佬！
+
 ## 使用须知
 - 本项目只适用于编程学习用途，不得用于实际选课阶段，请在下载后24小时内删除！
 - 不得随意传播本项目至任何公开场合（包括但不限于QQ群、微信群、贴吧论坛等）
