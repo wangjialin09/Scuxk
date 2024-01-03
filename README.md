@@ -7,13 +7,16 @@ Scu选课脚本
 
 ### 熟悉python的同学
 
-如果使用者熟悉python，可直接下载本项目主目录下的四个文件：`main.py` `fun.py` `config.py` `config.txt` 。
+如果使用者熟悉python，可直接下载本项目主目录下的四个文件：`main.py` `fun.py` `config.py` `xkconfig.txt` 。
 - 运行环境 `python3.11` ，其他版本不知道运行成啥样
 
-项目支持配置文件直接启动，配置示例见 `config.txt`
+项目支持配置文件直接启动，配置示例见 `xkconfig.txt`
 
-配置好 `config.txt`后，在该目录下，控制台运行指令 `python main.py`即可运行。当然也可以用 `pycharm` 等编辑器打开运行。
+配置好 `xkconfig.txt`后，在该目录下，控制台运行指令 `python main.py`即可运行。当然也可以用 `pycharm` 等编辑器打开运行。
 
+### 不熟悉python的同学
+
+为防止过度滥用，可以联系开发者给你发.exe文件哦
 
 ### 使用须知
 
