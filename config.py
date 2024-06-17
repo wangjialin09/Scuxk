@@ -5,6 +5,24 @@ import os
 import time
 import colorama
 
+def md5_hash(string, ver):
+    if ver != "1.8":
+        string += "{Urp602019}"
+
+    # 将字符串编码为UTF-8
+    utf8_string = string.encode('utf-8')
+
+    # 创建一个md5对象
+    md5_obj = hashlib.md5()
+
+    # 更新md5对象
+    md5_obj.update(utf8_string)
+
+    # 获取十六进制的哈希值
+    hex_md5 = md5_obj.hexdigest()
+
+    return hex_md5
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -48,7 +66,7 @@ if os.path.exists("xkconfig.txt"):
     print("开始登录 ^_^\n")
     j_username = info[0].strip('\n')
     o_password = info[1].strip('\n')
-    j_password = hashlib.md5(o_password.encode()).hexdigest()
+    j_password = md5_hash(o_password, "1.7") + "*" + md5_hash(o_password, "1.8")
     fajhh = info[2].strip('\n')
     courseNames = info[3].strip('\n').split(';')
     # 课程号1
@@ -59,7 +77,7 @@ else:
     manchoice = input(f'{bcolors.OKCYAN}\n未检测到本地配置文件，如果你只是想临时使用，请输入 1；如果你想生成一个配置文件以便后续重复使用，请输入 2：{bcolors.ENDC}')
     j_username = input(f'{bcolors.OKGREEN}\n请输入学号：{bcolors.ENDC}')
     o_password = input(f'{bcolors.OKGREEN}\n请输入教务系统密码：{bcolors.ENDC}')
-    j_password = hashlib.md5(o_password.encode()).hexdigest()
+    j_password = md5_hash(o_password, "1.7") + "*" + md5_hash(o_password, "1.8")
     fajhh = input(f'{bcolors.OKGREEN}\n请输入培养计划代码：{bcolors.ENDC}')
     # 获取用户输入的课程名称、课程号和课序号
     courseNames_input = input(f'{bcolors.OKGREEN}\n请输入课程名称（如果有多个课程，请用分号分隔名称）：{bcolors.ENDC}')
